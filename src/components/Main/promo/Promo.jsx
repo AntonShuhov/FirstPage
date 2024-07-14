@@ -1,6 +1,6 @@
 import './Promo.css';
 
-import promoImg from './../../img/images/promoImg.png';
+import promoImg from './../../../img/images/promoImg.png';
 
 function Promo() {
 

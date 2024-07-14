@@ -5,9 +5,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './Slider.css';
 
-import SalesImg1 from "../../../img/sales/Motorola_Razr_40_1.png";
-import SalesImg2 from "../../../img/sales/Motorola_Razr_40_2.png";
-import SalesImg3 from "../../../img/sales/Xiaomi_14_Ultra.png";
+import SalesImg1 from "../../../../img/sales/Motorola_Razr_40_1.png";
+import SalesImg2 from "../../../../img/sales/Motorola_Razr_40_2.png";
+import SalesImg3 from "../../../../img/sales/Xiaomi_14_Ultra.png";
 
 
 function SimpleSlider() {

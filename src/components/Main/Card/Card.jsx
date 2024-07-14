@@ -1,12 +1,12 @@
 import styles from "./Card.module.css";
 
-import arrowDollar from "../../img/cards/dollar-arrow.svg"
+import arrowDollar from "../../../img/cards/dollar-arrow.svg"
 
 const Card = (props) => {
 
         return (
             <div className={styles.card}>
-                <a href="#!" className={styles.card__link}></a>
+                <a href="#!" className={styles.card__link}/>
                 <img className={styles.card__img} src={props.cardImg} alt="cardPic"/>
                 <div className={styles.card__body}>
                     <div className={styles.card__text}>

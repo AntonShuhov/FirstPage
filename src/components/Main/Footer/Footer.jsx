@@ -1,18 +1,15 @@
 import "./Footer.css";
 
-import facebookImg from './../../img/footer/facebook.svg';
-import youtubeImg from './../../img/footer/youtube.svg';
-import instaImg from './../../img/footer/insta.svg';
-import telegaImg from './../../img/footer/telega.svg';
-import viberImg from './../../img/footer/viber.svg';
+import facebookImg from './../../../img/footer/facebook.svg';
+import youtubeImg from './../../../img/footer/youtube.svg';
+import instaImg from './../../../img/footer/insta.svg';
+import telegaImg from './../../../img/footer/telega.svg';
+import viberImg from './../../../img/footer/viber.svg';
 
-import appstoreImg from './../../img/footer/download-on-the-app-store-apple-logo-svgrepo-com.svg';
-import appstoreGImg from './../../img/footer/google-play-download-android-app-logo-svgrepo-com.svg';
-
-import GpayImg from './../../img/footer/gpay-logo.svg';
-import ApayImg from './../../img/footer/applepay-logo.svg';
-import VisaImg from './../../img/footer/visa-logo.svg';
-import MasterCardImg from './../../img/footer/mastercard-logo.svg';
+import GpayImg from './../../../img/footer/gpay-logo.svg';
+import ApayImg from './../../../img/footer/applepay-logo.svg';
+import VisaImg from './../../../img/footer/visa-logo.svg';
+import MasterCardImg from './../../../img/footer/mastercard-logo.svg';
 
 
 function Footer() {
@@ -54,7 +51,6 @@ function Footer() {
                                 <li className="footer__info-list-item"><a href="#!">Техника Samsung</a></li>
                                 <li className="footer__info-list-item"><a href="#!">Смартфоны</a></li>
                                 <li className="footer__info-list-item"><a href="#!">Техника для кухни</a></li>
-                                <li className="footer__info-list-item"><a href="#!">Персональный транспорт</a></li>
                                 <li className="footer__info-list-item"><a href="#!">Ноутбуки</a></li>
                                 <li className="footer__info-list-item"><a href="#!">Телевизоры</a></li>
                                 <li className="footer__info-list-item"><a href="#!">Для сада и дома</a></li>
@@ -67,7 +63,7 @@ function Footer() {
                         <div>
                             <p className="footer__info-title">Клиентам</p>
                             <ul className="footer__info-list">
-                                <li className="footer__info-list-item"><a href="#!">ПУбличная оферта</a></li>
+                                <li className="footer__info-list-item"><a href="#!">Публичная оферта</a></li>
                                 <li className="footer__info-list-item"><a href="#!">Видео обзоры</a></li>
                                 <li className="footer__info-list-item"><a href="#!">Доставка</a></li>
                                 <li className="footer__info-list-item"><a href="#!">Оплата</a></li>

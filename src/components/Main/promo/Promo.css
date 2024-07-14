@@ -86,7 +86,7 @@
     display: inline-block;
     width: 65px;
     height: 80px;
-    background-image: url("./../../img/categories/Apple btn.svg");
+    background-image: url("./../../../img/categories/Apple btn.svg");
 }
 
 .promo__btn {
