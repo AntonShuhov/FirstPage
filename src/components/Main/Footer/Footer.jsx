@@ -21,7 +21,7 @@ function Footer() {
                         <div>
                             <p className="footer__info-title">MOBILESHOP</p>
                             <ul className="footer__info-list">
-                                <li className="footer__info-list-item"><a href="#!">Карьера</a></li>
+                                <li className="footer__info-list-item"><a href="*">Карьера</a></li>
                                 <li className="footer__info-list-item"><a href="#!">Служба поддержки</a></li>
                                 <li className="footer__info-list-item"><a href="#!">Адреса магазинов</a></li>
                                 <li className="footer__info-list-item"><a href="#!">Про компанию</a></li>

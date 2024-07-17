@@ -16,7 +16,6 @@ const Card = (props) => {
                         <div className={styles.card__muted}>Купить сейчас!</div>
                     </div>
                     <img className={styles.arrowDollar} src={arrowDollar} alt="-->"/>
-
                 </div>
             </div>
         );
