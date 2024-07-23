@@ -41,6 +41,16 @@
     align-items: center;
     column-gap: 65px;
 }
+.header__nav-user {
+    visibility: hidden;
+}
+.header__nav-user.userActive {
+    visibility: visible;
+}
+.header__nav-userEmail {
+    color: var(--newColor1);
+    font-size: 15px;
+}
 .header__nav-link {
     color: var(--newColor1);
 }
@@ -119,7 +129,14 @@
 }
 .modal__login-submit {
     background-color: var(--newColor3);
-    width: 100px;
+    width: 130px;
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+.modal__login-registration {
+    background-color: var(--newColor3);
+    width: 130px;
     padding: 8px;
     border-radius: 5px;
 }
