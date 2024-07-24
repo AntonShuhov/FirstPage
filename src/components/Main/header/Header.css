@@ -5,7 +5,7 @@
 .header__row {
     padding: 10px 20px;
     display: flex;
-    column-gap: 30px;
+    column-gap: 15px;
     align-items: center;
     justify-content: space-between;
     background-color: var(--newColor2);
@@ -23,7 +23,7 @@
 
 .header__logo span {
     font-weight: 900;
-    font-size: 40px;
+    font-size: 30px;
     line-height: 1.5;
     letter-spacing: 0.03em;
     text-transform: uppercase;
@@ -39,14 +39,17 @@
 .header__nav-list {
     display: flex;
     align-items: center;
-    column-gap: 65px;
+    justify-content: center;
+    column-gap: 30px;
 }
 .header__nav-user {
-    visibility: hidden;
+    /*visibility: hidden;*/
+    color: var(--newColor1);
+    cursor: pointer;
 }
-.header__nav-user.userActive {
-    visibility: visible;
-}
+/*.header__nav-user.userActive {*/
+/*    visibility: visible;*/
+/*}*/
 .header__nav-userEmail {
     color: var(--newColor1);
     font-size: 15px;
@@ -86,7 +89,7 @@
     height: 0;
     top: -20px;
     border: 0 solid transparent;
-    right: 45px;
+    right: 80px;
     border-right-width: 20px;
     border-left-width: 20px;
     border-bottom: 20px solid var(--textColor);
@@ -139,4 +142,29 @@
     width: 130px;
     padding: 8px;
     border-radius: 5px;
+}
+.header__nav-usermenu {
+    z-index: 10;
+    margin-top: 10px;
+    position: absolute;
+    right: 150px;
+    width: 220px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: var(--newColor1);
+    color: var(--newColor2);
+    font-weight: bold;
+    border: 3px solid var(--textColor);
+    opacity: 0;
+    transform: translateY(-10px);
+    visibility: hidden;
+    transition: 0.3s;
+}
+.header__nav-usermenu.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+.header__nav-usermenu-item {
+
 }

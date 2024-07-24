@@ -18,11 +18,11 @@ export const Context = createContext({
 function App() {
     const {store} = useContext(Context);
 
-    // useEffect(() => {
-    //     if(localStorage.getItem('token')) {
-    //         store.checkAuth()
-    //     }
-    // }, [])
+    useEffect(() => {
+        if(localStorage.getItem('token')) {
+            store.checkAuth()
+        }
+    }, [])
 
   return (
       <>

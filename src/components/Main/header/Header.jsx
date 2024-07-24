@@ -1,5 +1,5 @@
 import './Header.css';
-import {useContext, useEffect, useState} from "react";
+import {useContext, useState} from "react";
 import {Context} from "../../../App";
 import {observer} from "mobx-react-lite";
 
@@ -9,7 +9,7 @@ import {
        } from "react-icons/gi";
 import { MdOutlinePets, MdOutlineSportsTennis } from "react-icons/md";
 import { BsTools } from "react-icons/bs";
-import { FaComputer } from "react-icons/fa6";
+import { FaComputer, FaArrowRightToBracket } from "react-icons/fa6";
 import { GrPersonalComputer } from "react-icons/gr";
 import { PiSprayBottleLight } from "react-icons/pi";
 import { FaCocktail, FaUserAstronaut } from "react-icons/fa";
@@ -20,16 +20,13 @@ function Header() {
     const [modalActive, setModalActive] = useState(false);
     const [catalogOpen, setCatalogOpen] = useState(false);
 
+    const [userMenuOpen, setUserMenuOpen] = useState(false);
+
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState();
 
     const {store} = useContext(Context);
 
-    useEffect(() => {
-        if(localStorage.getItem('token')) {
-            store.checkAuth()
-        }
-    }, [])
 
     return (
         <header className="header">
@@ -45,10 +42,18 @@ function Header() {
                             <li><button className="header__nav-btn-catalog" onClick={() => setCatalogOpen(!catalogOpen)}>Каталог</button></li>
                             <li><a href="/about" className="header__nav-link">Про нас</a></li>
                             <li><a href="/solds" className="header__nav-link">Акции</a></li>
-                            <li  className={`header__nav-user ${store.isAuth ? "userActive" : ""}`}>
-                                <FaUserAstronaut/> <span className="header__nav-userEmail" >{store.isAuth ? `${store.user.email}` : ''}</span>
+                            <li  className={`header__nav-user ${store.isAuth ? "userActive" : ""}`} >
+                                <button onClick={() => {
+                                    setUserMenuOpen(!userMenuOpen);
+                                }}> {
+
+                                }
+                                    <FaUserAstronaut/> <span className="header__nav-userEmail" >{store.isAuth ? `${store.user.email}` : ''}</span>
+                                </button>
                             </li>
-                            <li><button className="header__nav-btn" onClick={() => setModalActive(true)}>Войти</button></li>
+                            <li><button className="header__nav-btn" onClick={() => setModalActive(true)}>
+                                Войти
+                            </button></li>
                         </ul>
                         <ul className={`header__nav-catalog ${catalogOpen ? "active" : ""}`}>
                            <li className="header__nav-item"><GrPersonalComputer className="header__nav-item-icon"/>
@@ -88,6 +93,10 @@ function Header() {
                     </nav>
                 </div>
             </div>
+            <ul className={`header__nav-usermenu ${userMenuOpen ? "active" : ""}`}>
+                <li className="header__nav-usermenu-item">Выйти</li>
+                <li className="header__nav-usermenu-item">Личный кабинет</li>
+            </ul>
             <Modal active={modalActive} setActive={setModalActive}>
                 <div className="modal__login-container">
                    <input
@@ -103,10 +112,13 @@ function Header() {
                        value={password}
                        type="password"
                        placeholder="Пароль"/>
-                   <button className="modal__login-submit" onClick={() => store.login(email, password)}>
+                   <button className="modal__login-submit" onClick={() => {
+                       store.login(email, password);
+                       setModalActive(false)
+                   }}>
                        Войти
                    </button>
-                   <button className="modal__login-registration" onClick={() => store.registration(email, password)}>
+                   <button className="modal__login-registration" onClick={() => store.registration(email, password).then(() => setModalActive(false))}>
                        Регистрация
                    </button>
                 </div>
