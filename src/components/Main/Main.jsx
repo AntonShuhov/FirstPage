@@ -7,7 +7,9 @@ import Footer from "./Footer/Footer";
 
 function Main() {
     return (
-        <div className="catalog">
+        <div
+            // className="catalog"
+        >
             <Header/>
             <Promo/>
             <Brands/>

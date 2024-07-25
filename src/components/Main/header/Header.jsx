@@ -46,9 +46,12 @@ function Header() {
                                 <button onClick={() => {
                                     setUserMenuOpen(!userMenuOpen);
                                 }}> {
+                                    store.isAuth ? <div>
+                                                    <FaUserAstronaut/> <span className="header__nav-userEmail" >{store.isAuth ? `${store.user.email}` : ''}</span>
+                                                   </div> :
+                                        <FaArrowRightToBracket/>
+                                    }
 
-                                }
-                                    <FaUserAstronaut/> <span className="header__nav-userEmail" >{store.isAuth ? `${store.user.email}` : ''}</span>
                                 </button>
                             </li>
                             <li><button className="header__nav-btn" onClick={() => setModalActive(true)}>
@@ -94,8 +97,11 @@ function Header() {
                 </div>
             </div>
             <ul className={`header__nav-usermenu ${userMenuOpen ? "active" : ""}`}>
-                <li className="header__nav-usermenu-item">Выйти</li>
-                <li className="header__nav-usermenu-item">Личный кабинет</li>
+                {
+                    store.isAuth ? <><li className="header__nav-usermenu-item">Выйти</li>
+                        <li className="header__nav-usermenu-item">Личный кабинет</li></> : <li>Войдите или зарегистрируйтесь в личном кабинете</li>
+                }
+
             </ul>
             <Modal active={modalActive} setActive={setModalActive}>
                 <div className="modal__login-container">

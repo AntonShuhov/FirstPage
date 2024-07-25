@@ -8,6 +8,7 @@ import Catalog from "./components/Catalog/Catalog";
 import Solds from "./components/Solds/Solds";
 import NotFoundPage from "./components/NotFoundPage/NotFoundPage";
 import Store from './store/store';
+import AdminPanel from "./components/Admin/AdminPanel";
 
 const store = new Store();
 
@@ -37,6 +38,8 @@ function App() {
               <Route path="/about" element={<About />}/>
               <Route path="/catalog" element={<Catalog />}/>
               <Route path="/solds" element={<Solds />}/>
+              <Route path="/adminPanel" element={<AdminPanel />}/>
+
               <Route path="*" element={<NotFoundPage />}/>
           </Routes>
       </Context.Provider>
